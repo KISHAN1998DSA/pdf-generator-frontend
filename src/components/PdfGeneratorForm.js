@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { ClipLoader } from 'react-spinners';
 import './PdfGeneratorForm.css';
+import { BASE_URL } from '../config';
 
 const PdfGeneratorForm = () => {
   const [formData, setFormData] = useState({
@@ -25,7 +26,7 @@ const PdfGeneratorForm = () => {
     setError(null);
 
     try {
-      const response = await axios.post('http://localhost:3001/pdf/generate', formData, {
+      const response = await axios.post(`${BASE_URL}/pdf/generate`, formData, {
         responseType: 'blob',
       });
 
