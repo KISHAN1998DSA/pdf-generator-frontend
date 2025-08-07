@@ -1,6 +1,8 @@
 import React from 'react';
 import './App.css';
 import PdfGeneratorForm from './components/PdfGeneratorForm';
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 function App() {
   return (
@@ -11,6 +13,8 @@ function App() {
       <main>
         <PdfGeneratorForm />
       </main>
+      <Analytics />
+      <SpeedInsights />
     </div>
   );
 }
