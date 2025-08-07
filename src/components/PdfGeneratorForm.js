@@ -37,7 +37,7 @@ const PdfGeneratorForm = () => {
       const fileURL = URL.createObjectURL(file);
       const link = document.createElement('a');
       link.href = fileURL;
-      link.download = 'generated-document.pdf';
+      link.download = `${formData.title}.pdf`;
       link.click();
       
       // Clean up
